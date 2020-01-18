@@ -1,0 +1,45 @@
+1. 저장소 만들기
+.git 안에 버전관리 관련된 것들이 저장되는데 
+github 설치 때문에?? 다른 곳에 생성되어 있는 듯 함
+★ .git은 삭제하면 안 됨 ★
+
+2. 버전관리
+우클릭 > Git commit > 파일, 작업 내용을 해당 버전에 commit 
+Changes made > 클릭  
+-commit 확인
+우클릭>tortoise git > show log > 파일 클릭하면 버전 관리 전/후 비교 가능 
+
+3. 버전 아이디 (SHA-1)
+show log > SHA-1 : 버전 아이디 (SVN no. 같은 것)
+
+4. 버전 비교 (엑셀)
+show log > 파일 클릭하면 변경된 부분 빨간색 표시 
+엑셀 <-> tortoise Git 특별 기능 
+
+5. 버전 비교 (Git 지원 X) - CRUD
+UPDATE : show log > 버전 우클릭 > Reset > Hard 선택 
+DELETE :  show log > 이전 버전 우클릭 > Reset > Hard 선택 > 이후 버전 삭제
+(관련된 수정 사항도 자동으로 삭제된다)
+★ 하지만 인터넷에 올려서 공동 작업할 때는 버전 삭제하면 안 됨 ★
+
+6. Reset Revert
+Revert : 작업을 과거로 되돌리고, 인터넷에 올린 것도 삭제 가능하다
+하지만 어렵다!
+
+(현재-과거)
+   C, B, A 
+
+Reset B : B가 되고 싶다 => B A (C는 삭제)
+회계 장부를 삭제하는 것과 같은 개념 
+
+Revert B : B를 되돌리고 싶다 (=A가 되고 싶다)
+C, B는 그대로 있지만, A와 같은 내용이 최신 버전이 됨 (A C B A)
+회계 장부에서 틀린 사항을 찍찍 긋고 도장 찍는 것과 같은 개념
+
+7. 추가 사항
+.gitignore : 버전관리 해서는 안 되는 파일 (비밀번호, 임시 파일) 무시하고 commit
+branch
+tag : commit id
+backup : 꼭 필요하지만 어려운 기능 
+
+

@@ -1,0 +1,74 @@
+0. 백업
+버전정보를 .git 디렉토리에 보관한다
+
+목표 
+ 협업이 가능하다
+ 장소에 구애받지 않고 어디서든 작업 가능하다 
+
+백업하는 방법
+ 1) 자유롭지만 어려움
+ - 직접 백업 서버 구축 (항상 on 상태)
+ - 작업용/백업용 컴퓨터와 인터넷 연결 
+ - 보안 조치 필요 
+ 
+2) 제한적이지만 쉬운 방법
+ - 인터넷에 연결된 컴퓨터 (host)
+ - 인터넷 연결해 원격 사용가능 서버 임대 사업 (hosting)
+ - 로컬 저장소 버전 업로드 할 원격 저장소 임대 비즈니스 (git hosting)
+
+1. 용어 정리
+백업을 위해 최소 2대의 컴퓨터가 필요 
+ 작업용(지역 저장소, Local Repository, 집 / 회사 등)
+ 저장용(원격 저장소, Remote Repository)
+	         
+ 지역저장소 = push (업로드/문서, 소스) => 원격저장소 
+	ex) 집 => 원격
+ 지역저장소 <= clone (복제) = 원격저장소 
+	ex) 원격 => 회사, 원격 저장소 내용을 복제하는 것 (처음)
+ 지역저장소 <= pull = 원격저장소 : 원격 저장소에서 버전 다운로드 
+	ex) 원격 => 집
+
+원격 저장소를 직접 마련하기 어렵기 때문에 Git hosting 서비스 이용
+
+2. Git hosting 선정
+ 1) Framework is open-source?
+    데스크탑에 직접 설치 가능
+ 2) Open-source repositories
+    오픈 소스 프로젝트 무료인가 
+
+3. 저장소 생성
+- github > Repositories > New / +버튼 > New repository
+
+4. 공부의 방향
+지역-원격 저장소 연결하기
+ Local → Remote
+ Remote → Local
+ HTTP : 보안적으로 부족하고 불편할 수 있지만 쉽게 사용
+ SSH : 보안적으로 우수하고 편리하지만 사용하기 어려움
+
+5. 원격 저장소와 연결
+1) 원격 저장소 고유 주소 알아내기 (HTTP 방식)
+https://github.com/iamjobseeker/my-repo.git
+
+2) 지역 저장소에 원격 저장소 추가 
+컴퓨터 깃 폴더 > tortorise git > settings > git > remote > URL 
+
+3) name 설정
+지역 저장소에 많은 여러개의 원격 저장소가 추가될 수 있는데
+그 중 가장 기본이 되는 원격저장소의 이름은 origin 
+
+6. PUSH
+지역 저장소 원격 저장소 연결을 통해서 
+지역 저장소 버전을 원격 저장소로 업로드(push) 하기
+
+우클릭 > Git Sync > 로그인 (아무나 업로드 할 수 없도록) 
+깃허브 폴더 reload > 원격 저장소가 지역 저장소와 동기화 된 것 확인
+commit 클릭하여 version history 확인 가능 
+
+
+
+
+
+
+
+
